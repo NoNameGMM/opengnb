@@ -1,0 +1,14 @@
+name: Windows Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Build on Linux
+      run: |
+        make -f Makefile.linux
