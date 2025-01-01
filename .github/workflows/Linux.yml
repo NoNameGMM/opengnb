@@ -19,19 +19,19 @@ jobs:
           name: gnb
           path: ./gnb
     
-    - name: Upload gnb
+    - name: Upload gnb_crypto
         uses: actions/upload-artifact@v3
         with:
           name: gnb_crypto
           path: ./gnb_crypto
 
-    - name: Upload gnb
+    - name: Upload gnb_ctl
         uses: actions/upload-artifact@v3
         with:
           name: gnb_ctl
           path: ./gnb_ctl
 
-    - name: Upload gnb
+    - name: Upload gnb_es
         uses: actions/upload-artifact@v3
         with:
           name: gnb_es
