@@ -20,3 +20,27 @@ jobs:
       run: |
         # 运行 make 命令
         make -f Makefile.mingw_x86_64
+
+    - name: Upload gnb
+        uses: actions/upload-artifact@v3
+        with:
+          name: gnb
+          path: ./gnb.exe
+    
+    - name: Upload gnb
+        uses: actions/upload-artifact@v3
+        with:
+          name: gnb_crypto
+          path: ./gnb_crypto.exe
+
+    - name: Upload gnb
+        uses: actions/upload-artifact@v3
+        with:
+          name: gnb_ctl
+          path: ./gnb_ctl.exe
+
+    - name: Upload gnb
+        uses: actions/upload-artifact@v3
+        with:
+          name: gnb_es
+          path: ./gnb_es.exe

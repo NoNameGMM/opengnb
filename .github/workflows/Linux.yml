@@ -1,4 +1,4 @@
-name: Windows Build
+name: Linux Build
 
 on: [push, pull_request]
 
@@ -12,3 +12,27 @@ jobs:
     - name: Build on Linux
       run: |
         make -f Makefile.linux
+    
+    - name: Upload gnb
+        uses: actions/upload-artifact@v3
+        with:
+          name: gnb
+          path: ./gnb
+    
+    - name: Upload gnb
+        uses: actions/upload-artifact@v3
+        with:
+          name: gnb_crypto
+          path: ./gnb_crypto
+
+    - name: Upload gnb
+        uses: actions/upload-artifact@v3
+        with:
+          name: gnb_ctl
+          path: ./gnb_ctl
+
+    - name: Upload gnb
+        uses: actions/upload-artifact@v3
+        with:
+          name: gnb_es
+          path: ./gnb_es
