@@ -1,0 +1,22 @@
+name: Windows Build
+
+on: [push, pull_request]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Install MinGW-w64
+      run: |
+        # 安装 MinGW-w64 的步骤，可能需要根据你的具体需求调整
+        # 例如，使用 choco 安装 MinGW-w64
+        choco install mingw
+
+    - name: Compile project
+      run: |
+        # 运行 make 命令
+        make -f Makefile.mingw_x86_64
